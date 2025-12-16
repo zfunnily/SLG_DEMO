@@ -3,8 +3,8 @@ package bootstrap
 import (
 	"encoding/json"
 	"os"
-	"slg_sever/config"
 	"slg_sever/internal/battle"
+	"slg_sever/internal/config"
 	"slg_sever/internal/march"
 	"slg_sever/internal/node"
 	"slg_sever/internal/player"

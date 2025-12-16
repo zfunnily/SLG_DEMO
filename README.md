@@ -6,11 +6,20 @@
 * mac mini
 
 ## 目录说明
-| 目录       | 说明      |
-|----------|---------|
-| cmd      | 应用程序入口  |
-| pkg      | 可复用工具入口 |
-| internal | 内部服务逻辑  |
+| 目录                 | 说明      |
+|--------------------|---------|
+| cmd                | 应用程序入口  |
+| data               | 地图数据    |
+| internal           | 内部服务逻辑  |
+| internal.battle    | 战斗      |
+| internal.bootstrap | 启动引导    |
+| internal.config    | 配置数据结构  |
+| internal.march     | 行军管理    |
+| internal.node      | 节点信息    |
+| internal.player    | 玩家      |
+| internal.world     | 世界      |
+| opt                | 启动脚本    |
+| pkg                | 可复用工具入口 |
 
 ## TODO
 - [x] 定时器: 1 tick/s

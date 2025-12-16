@@ -1,4 +1,4 @@
-package slg
+package node
 
 type NodeType int
 

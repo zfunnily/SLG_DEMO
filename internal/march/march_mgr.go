@@ -1,14 +1,4 @@
-package slg
-
-type MarchID int64
-
-type March struct {
-	ID       MarchID
-	UnitID   BattleUnitID
-	From     NodeID
-	To       NodeID
-	ArriveAt int64 // tick
-}
+package march
 
 type MarchMgr struct {
 	marches map[MarchID]*March

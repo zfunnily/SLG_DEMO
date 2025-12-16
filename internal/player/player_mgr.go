@@ -1,4 +1,4 @@
-package slg
+package player
 
 type Player struct {
 	ID int64

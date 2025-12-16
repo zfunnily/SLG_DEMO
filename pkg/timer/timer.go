@@ -3,9 +3,10 @@ package timer
 import "time"
 
 type TickTimer struct {
-	ticker *time.Ticker
-	quit   chan struct{}
-	tick   int64
+	ticker   *time.Ticker
+	quit     chan struct{}
+	tick     int64
+	lastTime int64
 }
 
 func (t *TickTimer) Start(onTick func(tick int64)) {
@@ -15,7 +16,17 @@ func (t *TickTimer) Start(onTick func(tick int64)) {
 		for {
 			select {
 			case <-t.ticker.C:
-				t.tick++
+				now := time.Now().Unix()
+				if t.lastTime == 0 {
+					t.lastTime = now
+				}
+
+				delta := now - t.lastTime
+				t.lastTime = now
+
+				t.tick += delta
+				println(t.tick)
+
 				onTick(t.tick)
 
 			case <-t.quit:

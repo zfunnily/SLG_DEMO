@@ -1,4 +1,4 @@
-package slg
+package node
 
 type NodeID int64
 

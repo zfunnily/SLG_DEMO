@@ -1,10 +1,12 @@
-package slg
+package battle
+
+import "slg_sever/internal/node"
 
 type BattleID int64
 
 type Battle struct {
 	ID     BattleID
-	NodeID NodeID
+	NodeID node.NodeID
 	Units  []BattleUnitID
 }
 

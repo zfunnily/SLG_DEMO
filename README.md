@@ -33,5 +33,3 @@
 - [x] World: 整个地图管理
 - [x] Graph: 最基础的无权无向图
 - [x] MarchMgr: 行军
-- [ ] PlayerMgr: 玩家管理
-- [ ] BattleUnit: 战斗单位

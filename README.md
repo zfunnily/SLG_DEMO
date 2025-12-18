@@ -21,6 +21,13 @@
 | opt                | 启动脚本         |
 | pkg                | 可复用工具入口      |
 
+## 启动服务器
+需要安装**go**环境
+```bash
+./opt/start.sh
+```
+
+
 ## TODO
 - [x] 定时器: 1 tick/s
 - [x] World: 整个地图管理

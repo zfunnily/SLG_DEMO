@@ -10,7 +10,7 @@ type MarchID int64
 type March struct {
 	ID       MarchID
 	UnitID   battle.BattleUnitID
-	From     node.NodeID
-	To       node.NodeID
+	Path     []node.NodeID
+	Index    int
 	ArriveAt int64 // tick
 }

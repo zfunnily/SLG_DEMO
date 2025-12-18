@@ -1,18 +1,29 @@
 package bootstrap
 
-import "slg_sever/pkg/timer"
+import (
+	"slg_sever/internal/global"
+	"slg_sever/internal/http"
+	"slg_sever/internal/test"
+	"slg_sever/pkg/timer"
+	"slg_sever/pkg/uuid"
+)
 
 func Run() {
 
 	println("bootstrap Run...")
 
-	InitWorld()
+	global.InitWorld()
+	data := global.InitMarchUnit()
+	uuid.Init(0, 0)
 
 	t := timer.NewTickTimer()
 	t.Start(func(tick int64) {
-		GetSLGMap().Tick(tick)
+		global.GetWorld().Tick(tick)
 	})
 
-	err := make(chan error)
-	<-err
+	// 启动行军单位
+	go test.StartMarch(data)
+
+	// 启动HTTP服务器
+	http.StartHTTPServer(8080)
 }

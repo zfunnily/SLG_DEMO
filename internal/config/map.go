@@ -12,7 +12,3 @@ type MapConfig struct {
 	HQ      []MapNode `json:"hq"`
 	Small   []MapNode `json:"small"`
 }
-
-func init() {
-
-}

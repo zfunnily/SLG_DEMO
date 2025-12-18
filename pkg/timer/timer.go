@@ -25,8 +25,6 @@ func (t *TickTimer) Start(onTick func(tick int64)) {
 				t.lastTime = now
 
 				t.tick += delta
-				println(t.tick)
-
 				onTick(t.tick)
 
 			case <-t.quit:
